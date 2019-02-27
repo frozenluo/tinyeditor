@@ -1,0 +1,20 @@
+{
+  "name": "tinyeditor",
+  "version": "1.0.0",
+  "description": "tiny editor for presentation",
+  "author": "Zhang Dazhan <frozenluo@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "webpack-dev-server --open",
+    "watch": "webpack --watch"
+  },
+  "dependencies": {
+    "randomcolor": "^0.5.3",
+    "webpack": "^4.28.1",
+    "webpack-cli": "^3.2.1"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^3.1.14"
+  }
+}
