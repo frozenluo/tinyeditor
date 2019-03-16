@@ -1,4 +1,10 @@
 import randomColor from 'randomcolor';
+import {Modal} from 'antd';
+import React from 'react';
+import ReactDOM from 'react-dom'
+import "antd/dist/antd.css";
+
+import NativeEditor from './v1/NativeEditor'
 
 function execCommand(name, arg) {
     try {
@@ -23,4 +29,22 @@ window.addEventListener('load', () => {
             execCommand('backColor', randomColor());
         })
     }
+
+    const editorV1 = document.querySelector('#editorV1');
+    if (editorV1) {
+        editorV1.addEventListener('click', () => {
+            Modal.confirm({
+                content: <NativeEditor value={editorV1.innerText} onEnter={(v) => {
+                    editorV1.innerText = v
+                }}/>
+            })
+        })
+    }
 });
+
+ReactDOM.render(
+    <div>hello</div>,
+    document.getElementById('app')
+);
+
+module.hot.accept();

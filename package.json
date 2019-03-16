@@ -10,11 +10,27 @@
     "watch": "webpack --watch"
   },
   "dependencies": {
+    "antd": "^3.13.6",
     "randomcolor": "^0.5.3",
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3",
     "webpack": "^4.28.1",
     "webpack-cli": "^3.2.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "css-loader": "^2.1.0",
+    "react-hot-loader": "^4.7.1",
+    "style-loader": "^0.23.1",
     "webpack-dev-server": "^3.1.14"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
   }
 }
