@@ -2,6 +2,7 @@ const path = require('path')
 const webpack = require('webpack')
 
 module.exports = {
+    mode: 'development',
     entry: './src/index.js',
     output: {
         filename: 'main.js',
@@ -10,7 +11,7 @@ module.exports = {
     devServer: {
         contentBase: './dist',
     },
-    devtool: 'cheap-eval-source-map',
+    devtool: 'cheap-module-eval-source-map',
     module: {
         rules: [{
             test: /\.(js|jsx)$/,
@@ -27,5 +28,10 @@ module.exports = {
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
         new webpack.DefinePlugin({'process.env': {'NODE_ENV': '"development"'}})
-    ]
+    ],
+    optimization: {
+        splitChunks: {
+            chunks: 'all'
+        }
+    }
 };
